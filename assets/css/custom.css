@@ -1,0 +1,32 @@
+.btn {
+    font-size:12px;
+    text-transform: capitalize;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.headerbar-left{
+    position:relative;
+    width: 20%;
+    padding-right: 0;
+}
+
+.hearderbar-right{
+    padding:0;
+    width:79%;
+}
+
+.headerbar-title{
+    float:left;
+}
+.headerbar-title h3{
+    margin-top:12px;
+}
+
+.headerbar-filter-option{
+    float:right;
+    padding: 15px 0px 15px 0px;
+}
