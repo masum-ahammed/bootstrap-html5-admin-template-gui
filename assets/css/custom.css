@@ -8,25 +8,32 @@
     border-color: #ccc;
 }
 
-.headerbar-left{
-    position:relative;
-    width: 20%;
-    padding-right: 0;
+.headerbar-left  li > h3{
+    margin-top:5px;
 }
 
-.hearderbar-right{
-    padding:0;
-    width:79%;
-}
+.headerbar-right > .header-nav{
+    padding:15px;
 
-.headerbar-title{
-    float:left;
 }
-.headerbar-title h3{
-    margin-top:12px;
-}
+@media (max-width: 768px) {
+    .headerbar-right {
+        height:70px;
+        padding-top: 2px;
+    }
+    .headerbar-right > .header-nav{
+        padding:0px;
 
-.headerbar-filter-option{
-    float:right;
-    padding: 15px 0px 15px 0px;
+    }
 }
+/*.headerbar-title{*/
+    /*float:left;*/
+/*}*/
+/*.headerbar-title h3{*/
+    /*margin-top:12px;*/
+/*}*/
+
+/*.headerbar-filter-option{*/
+    /*float:right;*/
+    /*padding: 15px 0px 15px 0px;*/
+/*}*/
