@@ -26,6 +26,21 @@
 
     }
 }
+
+.page-footer{
+   background-color: #2B323A;
+    color:#fff;
+}
+
+.page-footer .page-footer-left {
+    float: left;
+    display: inline-block;
+}
+.page-footer .page-footer-right {
+    text-align: right;
+    display: block;
+}
+
 /*.headerbar-title{*/
     /*float:left;*/
 /*}*/
