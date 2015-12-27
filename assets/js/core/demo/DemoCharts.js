@@ -32,7 +32,7 @@
 		
 		// Sparkline
 		this._initResponsiveSparkline();
-		this._initInlineSparkline();
+		this._initSparklines();
 
 
 
@@ -213,16 +213,35 @@
 		});
 	};
 
-	p._initInlineSparkline = function () {
-		if (!$.isFunction($.fn.sparkline)) {
-			return;
-		}
+	p._initSparklines = function () {
+		// Generate random sparkline data
+		var points = [20, 10, 40, 45, 10, 60, 30, 20, 20, 38, 70, 15, 82, 44, 20];
 
-		$('.inlinesparkline').each(function () {
-			var options = $(this).data();
-			$(this).sparkline('html', options);
+		//materialadmin.App.callOnResize(function () {
+		//	var options = $('.sparkline-revenue').data();
+		//	options.type = 'line';
+		//	options.width = '100%';
+		//	options.height = $('.sparkline-revenue').height() + 'px';
+		//	options.fillColor = false;
+		//	$('.sparkline-revenue').sparkline(points, options);
+		//});
+
+		materialadmin.App.callOnResize(function () {
+
+			var barWidth = 5;
+			var spacing = 3;
+
+			var options = $('.sparkline-visits').data();
+			options.type = 'bar';
+			options.barWidth = barWidth;
+			options.barSpacing = spacing;
+			options.height = $('.sparkline-visits').height() + 'px';
+			options.fillColor = false;
+
+			$('.sparkline-visits').sparkline(points, options);
 		});
 	};
+
 
 	// =========================================================================
 	// KNOB
