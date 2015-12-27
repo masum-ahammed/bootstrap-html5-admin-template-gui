@@ -92,156 +92,142 @@
 
 						<div class="row">
 
-							<!-- BEGIN SITE ACTIVITY -->
+							<!-- BEGIN Fuel efficiency -->
 							<div class="col-md-6">
 								<div class="card ">
-									<div class="row">
-										<div class="col-md-8">
-											<div class="card-head">
-												<header>Site activity</header>
-											</div><!--end .card-head -->
-											<div class="card-body height-8">
-												<div id="flot-visitors-legend" class="flot-legend-horizontal stick-top-right no-y-padding"></div>
-												<div id="flot-visitors" class="flot height-7" data-title="Activity entry" data-color="#7dd8d2,#0aa89e"></div>
-											</div><!--end .card-body -->
-										</div><!--end .col -->
-										<div class="col-md-4">
-											<div class="card-head">
-												<header>Today's stats</header>
-											</div>
-											<div class="card-body height-8">
-												<strong>214</strong> members
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:43%"></div>
-												</div>
-												756 pageviews
-												<span class="pull-right text-success text-sm">0,68% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:11%"></div>
-												</div>
-												291 bounce rates
-												<span class="pull-right text-danger text-sm">21,08% <i class="md md-trending-down"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-danger" style="width:93%"></div>
-												</div>
-												32,301 visits
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:63%"></div>
-												</div>
-												132 pages
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:47%"></div>
-												</div>
-											</div><!--end .card-body -->
-										</div><!--end .col -->
-									</div><!--end .row -->
-								</div><!--end .card -->
-							</div><!--end .col -->
-							<!-- END SITE ACTIVITY -->
+									<div class="row card-head text-primary">
+										<div class="col-md-9 col-xs-9">
+											<header>Fuel efficiency</header>
+										</div><!--end .card-head -->
+										<div class="col-md-3 col-xs-3 text-right">
+											<header><i class="fa fa-angle-up"></i>20%</header>
+										</div><!--end .card-head -->
 
-							<!-- BEGIN SERVER STATUS -->
-							<div class="col-md-6">
-								<div class="card">
-									<div class="card-head">
-										<header class="text-primary">Server status</header>
-									</div><!--end .card-head -->
-									<div class="card-body height-4">
-										<div class="pull-right text-center">
-											<em class="text-primary">Temperature</em>
-											<br/>
-											<div id="serverStatusKnob" class="knob knob-shadow knob-primary knob-body-track size-2">
-												<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".09" value="50" data-readOnly=true>
-											</div>
+
+									</div><!--end .row -->
+									<div class="row">
+										<div class="card-body col-md-12 col-xs-12">
+											<div id="fuel-efficiency-bar-graph" class="height-7" data-colors="#9C27B0,#2196F3,#0aa89e"></div>
 										</div>
-									</div><!--end .card-body -->
-									<div class="card-body height-4 no-padding">
-										<div class="stick-bottom-left-right">
-											<div id="rickshawGraph" class="height-4" data-color1="#0aa89e" data-color2="rgba(79, 89, 89, 0.2)"></div>
+									</div>
+									<div class="row card-detail">
+										<div class="col-md-4 col-xs-4">
+											<div>Home visits: <strong> 9</strong></div>
+											<div>Idle time: <strong> 3</strong></div>
 										</div>
-									</div><!--end .card-body -->
+										<div class="col-md-4 col-xs-4">
+											<div>Speed violations: <strong> 5</strong></div>
+											<div>Restricted areas: <strong> 3</strong></div>
+										</div>
+										<div class="col-md-3 col-xs-3 text-right">
+											<a class="btn btn-default">Details ></a>
+										</div>
+									</div>
 								</div><!--end .card -->
 							</div><!--end .col -->
-							<!-- END SERVER STATUS -->
+							<!-- END Fuel efficiency -->
+
+							<!-- BEGIN Productive efficiency -->
+							<div class="col-md-6">
+								<div class="card ">
+									<div class="row card-head text-primary">
+										<div class="col-md-9 col-xs-9">
+											<header>Productive efficiency</header>
+										</div><!--end .card-head -->
+										<div class="col-md-3 col-xs-3 text-right">
+											<header><i class="fa fa-angle-down"></i>18%</header>
+										</div><!--end .card-head -->
+
+
+									</div><!--end .row -->
+									<div class="row">
+										<div class="card-body col-md-12 col-xs-12">
+											<div id="productive-efficiency-bar-graph" class="height-7" data-colors="#9C27B0,#2196F3,#0aa89e"></div>
+										</div>
+									</div>
+									<div class="row card-detail">
+										<div class="col-md-4 col-xs-4">
+											<div>Home visits: <strong> 9</strong></div>
+											<div>Avg time per client: <strong> 3</strong></div>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<div>Restricted areas: <strong> 5</strong></div>
+											<div>Quick stops: <strong> 3</strong></div>
+										</div>
+										<div class="col-md-3 col-xs-3 text-right">
+											<a class="btn btn-default">Details ></a>
+										</div>
+									</div>
+								</div><!--end .card -->
+							</div><!--end .col -->
+							<!-- END Productive efficiency -->
 
 						</div><!--end .row -->
 						<div class="row">
 
-							<!-- BEGIN SITE ACTIVITY -->
+							<!-- BEGIN Deviations -->
 							<div class="col-md-6">
 								<div class="card ">
-									<div class="row">
-										<div class="col-md-8">
-											<div class="card-head">
-												<header>Site activity</header>
-											</div><!--end .card-head -->
-											<div class="card-body height-8">
-												<div id="flot-visitors-legend" class="flot-legend-horizontal stick-top-right no-y-padding"></div>
-												<div id="flot-visitors" class="flot height-7" data-title="Activity entry" data-color="#7dd8d2,#0aa89e"></div>
-											</div><!--end .card-body -->
-										</div><!--end .col -->
-										<div class="col-md-4">
-											<div class="card-head">
-												<header>Today's stats</header>
-											</div>
-											<div class="card-body height-8">
-												<strong>214</strong> members
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:43%"></div>
-												</div>
-												756 pageviews
-												<span class="pull-right text-success text-sm">0,68% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:11%"></div>
-												</div>
-												291 bounce rates
-												<span class="pull-right text-danger text-sm">21,08% <i class="md md-trending-down"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-danger" style="width:93%"></div>
-												</div>
-												32,301 visits
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:63%"></div>
-												</div>
-												132 pages
-												<span class="pull-right text-success text-sm">0,18% <i class="md md-trending-up"></i></span>
-												<div class="progress progress-hairline">
-													<div class="progress-bar progress-bar-primary-dark" style="width:47%"></div>
-												</div>
-											</div><!--end .card-body -->
-										</div><!--end .col -->
-									</div><!--end .row -->
-								</div><!--end .card -->
-							</div><!--end .col -->
-							<!-- END SITE ACTIVITY -->
+									<div class="row card-head text-primary">
+										<div class="col-md-9 col-xs-9">
+											<header>Deviations</header>
+										</div><!--end .card-head -->
+										<div class="col-md-3 col-xs-3 text-right">
+											<header><i class="fa fa-angle-up"></i>5%</header>
+										</div><!--end .card-head -->
 
-							<!-- BEGIN SERVER STATUS -->
-							<div class="col-md-6">
-								<div class="card">
-									<div class="card-head">
-										<header class="text-primary">Server status</header>
-									</div><!--end .card-head -->
-									<div class="card-body height-4">
-										<div class="pull-right text-center">
-											<em class="text-primary">Temperature</em>
-											<br/>
-											<div id="serverStatusKnob" class="knob knob-shadow knob-primary knob-body-track size-2">
-												<input type="text" class="dial" data-min="0" data-max="100" data-thickness=".09" value="50" data-readOnly=true>
-											</div>
+
+									</div><!--end .row -->
+									<div class="row">
+										<div class="card-body col-md-12 col-xs-12">
+											<div id="deviation-bar-graph" class="height-7" data-colors="#9C27B0,#2196F3,#0aa89e"></div>
 										</div>
-									</div><!--end .card-body -->
-									<div class="card-body height-4 no-padding">
-										<div class="stick-bottom-left-right">
-											<div id="rickshawGraph" class="height-4" data-color1="#0aa89e" data-color2="rgba(79, 89, 89, 0.2)"></div>
+									</div>
+									<div class="row card-detail">
+										<div class="col-md-8 col-xs-8">
+											<div>Deviations: <strong> 9</strong></div>
+											<div>&nbsp;</div>
 										</div>
-									</div><!--end .card-body -->
+
+										<div class="col-md-3 col-xs-3 text-right">
+											<a class="btn btn-default">Details ></a>
+										</div>
+									</div>
 								</div><!--end .card -->
-							</div><!--end .col -->
-							<!-- END SERVER STATUS -->
+							</div>
+							<!-- END Deviations -->
+
+							<!-- BEGIN Maintenance cost -->
+							<div class="col-md-6">
+								<div class="card ">
+									<div class="row card-head text-primary">
+										<div class="col-md-9 col-xs-9">
+											<header>Maintenance cost</header>
+										</div><!--end .card-head -->
+										<div class="col-md-3 col-xs-3 text-right">
+											<header><i class="fa fa-angle-up"></i>23%</header>
+										</div><!--end .card-head -->
+
+
+									</div><!--end .row -->
+									<div class="row">
+										<div class="card-body col-md-12 col-xs-12">
+											<div id="maintenance-cost-bar-graph" class="height-7" data-colors="#9C27B0,#2196F3,#0aa89e"></div>
+										</div>
+									</div>
+									<div class="row card-detail">
+										<div class="col-md-8 col-xs-8">
+											<div>Speed violations: <strong> 9</strong></div>
+											<div>Over mileage: <strong> 120km</strong></div>
+										</div>
+
+										<div class="col-md-3 col-xs-3 text-right">
+											<a class="btn btn-default">Details ></a>
+										</div>
+									</div>
+								</div><!--end .card -->
+							</div>
+							<!-- END Maintenance cost -->
 
 						</div><!--end .row -->
 					</div><!--end .section-body -->
@@ -360,6 +346,8 @@
 		<script src="../../assets/js/libs/jquery-knob/jquery.knob.min.js"></script>
 		<script src="../../assets/js/libs/sparkline/jquery.sparkline.min.js"></script>
 		<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="../../assets/js/libs/raphael/raphael-min.js"></script>
+		<script src="../../assets/js/libs/morris.js/morris.min.js"></script>
 		<script src="../../assets/js/libs/d3/d3.min.js"></script>
 		<script src="../../assets/js/libs/d3/d3.v3.js"></script>
 		<script src="../../assets/js/libs/rickshaw/rickshaw.min.js"></script>
@@ -372,6 +360,8 @@
 		<script src="../../assets/js/core/source/AppVendor.js"></script>
 		<script src="../../assets/js/core/demo/Demo.js"></script>
 		<script src="../../assets/js/core/demo/DemoDashboard.js"></script>
+		<script src="../../assets/js/core/demo/DemoCharts.js"></script>
+
 		<!-- END JAVASCRIPT -->
 
 	</body>

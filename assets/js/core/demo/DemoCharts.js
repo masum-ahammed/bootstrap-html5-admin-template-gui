@@ -27,19 +27,19 @@
 
 	p.initialize = function () {
 		// Rickshaw
-		this._initRickshaw();
-		this._initRickshawDemo2();
+		//this._initRickshaw();
+		//this._initRickshawDemo2();
 		
 		// Sparkline
-		this._initResponsiveSparkline();
-		this._initInlineSparkline();
+		//this._initResponsiveSparkline();
+		//this._initInlineSparkline();
 
 		// Knob
-		this._initKnob();
+		//this._initKnob();
 
 		// Flot
-		this._initFlotLine();
-		this._initFlotRealtime();
+		//this._initFlotLine();
+		//this._initFlotRealtime();
 
 		// Morris
 		this._initMorris();
@@ -480,9 +480,9 @@
 		}
 
 		// Morris Bar demo
-		if ($('#morris-bar-graph').length > 0) {
+		if ($('#fuel-efficiency-bar-graph').length > 0) {
 			Morris.Bar({
-				element: 'morris-bar-graph',
+				element: 'fuel-efficiency-bar-graph',
 				data: [
 					{x: '2011 Q1', y: 3, z: 2, a: 3},
 					{x: '2011 Q2', y: 2, z: null, a: 1},
@@ -492,10 +492,58 @@
 				xkey: 'x',
 				ykeys: ['y', 'z', 'a'],
 				labels: ['Y', 'Z', 'A'],
-				barColors: $('#morris-bar-graph').data('colors').split(',')
+				barColors: $('#fuel-efficiency-bar-graph').data('colors').split(',')
 			});
 		}
 
+		if ($('#productive-efficiency-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'productive-efficiency-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#productive-efficiency-bar-graph').data('colors').split(',')
+			});
+		}
+		//deviation-bar-graph
+		if ($('#deviation-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'deviation-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#deviation-bar-graph').data('colors').split(',')
+			});
+		}
+
+		//maintenance-cost-bar-graph
+		if ($('#maintenance-cost-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'maintenance-cost-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 6, z: 2, a: 6},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 4, z: 8, a: 4}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#maintenance-cost-bar-graph').data('colors').split(',')
+			});
+		}
 		// Morris stacked bar demo
 		if ($('#morris-stacked-bar-graph').length > 0) {
 			Morris.Bar({

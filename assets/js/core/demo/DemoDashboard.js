@@ -27,10 +27,10 @@
 
 	p.initialize = function () {
 		//this._initSparklines();
-		this._initFlotVisitors();
-		this._initRickshaw();
-		this._initKnob();
-		this._initFlotRegistration();
+		//this._initFlotVisitors();
+		//this._initRickshaw();
+		//this._initKnob();
+		//this._initFlotRegistration();
 	};
 
 	// =========================================================================

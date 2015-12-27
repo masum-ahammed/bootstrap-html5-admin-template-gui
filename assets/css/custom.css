@@ -41,6 +41,10 @@
     display: block;
 }
 
+.card-detail{
+    padding: 0px 5px 15px 25px;
+}
+
 /*.headerbar-title{*/
     /*float:left;*/
 /*}*/
