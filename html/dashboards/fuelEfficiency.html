@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fuel efficiency</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="your,keywords">
+		<meta name="description" content="Short explanation about this website">
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/bootstrap.css?1422792965" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/materialadmin.css?1425466319" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/font-awesome.min.css?1422529194" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/rickshaw/rickshaw.css?1422792967" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/morris/morris.core.css?1420463396" />
+		<link rel="stylesheet" type="text/css" href="../../assets/js/libs/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+		<link type="text/css" rel="stylesheet" href="../../assets/css/custom.css" />
+		<!-- END STYLESHEETS -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../../assets/js/libs/utils/html5shiv.js?1403934957"></script>
+		<script type="text/javascript" src="../../assets/js/libs/utils/respond.min.js?1403934956"></script>
+		<![endif]-->
+	</head>
+	<body class="menubar-hoverable header-fixed ">
+
+		<!-- BEGIN HEADER-->
+		<header id="header" >
+			<div class="headerbar">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="headerbar-left">
+					<ul class="header-nav header-nav-options">
+						<li class="header-nav-brand" >
+							<div class="brand-holder">
+								<a href="../../html/dashboards/dashboard.html">
+									<img src="../../assets/img/logo-car.png" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+								<i class="fa fa-bars"></i>
+							</a>
+						</li>
+						<li>
+							<h3>Fuel efficiency</h3>
+						</li>
+					</ul>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="headerbar-right">
+
+					<div class="header-nav header-nav-profile">
+						<div class="btn-group">
+							<a href="javascript:;" class="btn btn-default">
+								This week </a>
+							<a href="javascript:;" class="btn btn-default">
+								This month </a>
+							<a href="javascript:;" class="btn btn-default">
+								This year </a>
+						</div>
+						<div id="reportrange" class="btn btn-default">
+							<i class="fa fa-calendar"></i>
+							&nbsp; <span>November 26, 2015 - December 25, 2015</span>
+							<b class="fa fa-angle-down"></b>
+						</div>
+					</div><!--end .header-nav-profile -->
+
+				</div><!--end #header-navbar-collapse -->
+			</div>
+		</header>
+		<!-- END HEADER-->
+
+		<!-- BEGIN BASE-->
+		<div id="base">
+
+			<!-- BEGIN OFFCANVAS LEFT -->
+			<div class="offcanvas">
+			</div><!--end .offcanvas-->
+			<!-- END OFFCANVAS LEFT -->
+
+			<!-- BEGIN CONTENT-->
+			<div id="content">
+				<section>
+					<div class="section-body">
+
+						<div class="row">
+
+							<!-- BEGIN Fuel efficiency -->
+							<div class="col-md-12">
+								<div class="card ">
+									<div class="row card-head text-primary">
+										<div class="col-md-9 col-xs-9">
+											<header>Fuel efficiency</header>
+										</div><!--end .card-head -->
+										<div class="col-md-3 col-xs-3 text-right">
+											<header><i class="fa fa-angle-up"></i>20%</header>
+										</div><!--end .card-head -->
+
+
+									</div><!--end .row -->
+									<div class="row">
+										<div class="card-body col-md-12 col-xs-12">
+											<div id="fuel-efficiency-bar-graph" class="height-7" data-colors="#9C27B0,#2196F3,#0aa89e"></div>
+										</div>
+									</div>
+									<div class="row card-detail">
+										<div class="col-md-4 col-xs-4">
+											<div>Home visits: <strong> 9</strong></div>
+											<div>Idle time: <strong> 3</strong></div>
+										</div>
+										<div class="col-md-4 col-xs-4">
+											<div>Speed violations: <strong> 5</strong></div>
+											<div>Restricted areas: <strong> 3</strong></div>
+										</div>
+										<div class="col-md-3 col-xs-3 text-right">
+											<a class="btn btn-default">Details ></a>
+										</div>
+									</div>
+								</div><!--end .card -->
+							</div><!--end .col -->
+							<!-- END Fuel efficiency -->
+
+
+
+						</div><!--end .row -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="row">
+										<div class="col-md-3 col-xs-9">
+											<div class="row">
+												<div class="col-md-6 col-xs-6 height-3">
+													<div id="fuel-pie" class="pie-chart"></div>
+												</div><!--end .card -->
+												<div class="col-md-6 col-xs-6 height-3 pie-legend-container">
+													<div class="pie-legend" id="fuel-legend"></div>
+												</div>
+											</div>
+
+										</div>
+										<div class="col-md-9 col-xs-12">
+											<div class="row">
+												<div class="col-md-3 col-xs-6">
+													<div class="small-bar-chart-body">
+														<div class="height-1">
+															<div class="opacity-50">Home visitations</div>
+															<div><strong class="text-xl">23</strong></div>
+														</div>
+														<div>
+															<div class="height-1 sparkline-visits" data-bar-color="#EF4836"></div>
+														</div>
+
+													</div>
+
+												</div>
+												<div class="col-md-3 col-xs-6">
+													<div class="small-bar-chart-body">
+														<div class="height-1">
+															<div class="opacity-50">Speed violations</div>
+															<div><strong class="text-xl">5</strong></div>
+														</div>
+														<div>
+															<div class="height-1 sparkline-visits" data-bar-color="#EF4836"></div>
+														</div>
+
+													</div>
+
+												</div>
+												<div class="col-md-3 col-xs-6">
+													<div class="small-bar-chart-body">
+														<div class="height-1">
+															<div class="opacity-50">Restricted areas</div>
+															<div><strong class="text-xl">3</strong></div>
+														</div>
+														<div>
+															<div class="height-1 sparkline-visits" data-bar-color="#EF4836"></div>
+														</div>
+
+													</div>
+
+												</div>
+												<div class="col-md-3 col-xs-6">
+													<div class="small-bar-chart-body">
+														<div class="height-1">
+															<div class="opacity-50">Total minutes spent</div>
+															<div><strong class="text-xl">200</strong></div>
+														</div>
+														<div>
+															<div class="height-1 sparkline-visits" data-bar-color="#EF4836"></div>
+														</div>
+
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+
+							<!-- BEGIN Maintenance cost -->
+
+							<!-- END Maintenance cost -->
+
+						</div><!--end .row -->
+					</div><!--end .section-body -->
+				</section>
+				<div class="page-footer">
+					<div class="page-footer-left">
+						© 2015  <a href="#" title="solve it" target="_blank">Sove it!</a>
+					</div>
+					<div  class="page-footer-right">
+						<span>privacy policy | send feedback</span>
+					</div>
+				</div>
+			</div><!--end #content-->
+			<!-- END CONTENT -->
+
+			<!-- BEGIN MENUBAR-->
+			<div id="menubar" class="menubar-inverse ">
+				<div class="menubar-fixed-panel">
+					<div>
+						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<div class="expanded">
+						<a href="../../html/dashboards/dashboard.html">
+							<span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+						</a>
+					</div>
+				</div>
+				<div class="menubar-scroll-panel">
+
+					<!-- BEGIN MAIN MENU -->
+					<ul id="main-menu" class="gui-controls">
+
+
+
+						<!-- BEGIN DASHBOARD -->
+						<li class="gui-folder">
+							<a>
+								<div class="gui-icon"><i class="fa fa-bar-chart"></i></div>
+								<span class="title">Dashboard</span>
+							</a>
+							<!--start submenu -->
+							<ul>
+								<li><a href="../../html/mail/inbox.html"><span class="title">Fuel efficiency</span></a></li>
+								<li><a href="../../html/mail/compose.html"><span class="title">Productiveness</span></a></li>
+								<li><a href="../../html/mail/reply.html"><span class="title">Deviations</span></a></li>
+								<li><a href="../../html/mail/message.html"><span class="title">Maintenance cost</span></a></li>
+							</ul><!--end /submenu -->
+						</li><!--end /menu-li -->
+						<!-- END EMAIL -->
+
+						<!-- BEGIN DASHBOARD -->
+						<li>
+							<a href="../../html/layouts/builder.html">
+								<div class="gui-icon"><i class="fa fa-car"></i></div>
+								<span class="title">Live Track</span>
+							</a>
+						</li><!--end /menu-li -->
+						<li>
+							<a href="../../html/layouts/builder.html">
+								<div class="gui-icon"><i class="fa fa-history"></i></div>
+								<span class="title">Events</span>
+							</a>
+						</li><!--end /menu-li -->
+						<li>
+							<a href="../../html/layouts/builder.html">
+								<div class="gui-icon"><i class="fa fa-pencil-square-o"></i></div>
+								<span class="title">Rules</span>
+							</a>
+						</li><!--end /menu-li -->
+						<li>
+							<a href="../../html/layouts/builder.html">
+								<div class="gui-icon"><i class="fa fa-cogs"></i></div>
+								<span class="title">Settings</span>
+							</a>
+						</li><!--end /menu-li -->
+						<li>
+							<a href="../../html/layouts/builder.html">
+								<div class="gui-icon"><i class="fa fa-sign-out"></i></div>
+								<span class="title">Log out</span>
+							</a>
+						</li><!--end /menu-li -->
+						<!-- END DASHBOARD -->
+
+
+
+
+
+					</ul>
+
+					<!-- END MAIN MENU -->
+
+
+				</div><!--end .menubar-scroll-panel-->
+			</div><!--end #menubar-->
+			<!-- END MENUBAR -->
+
+
+		</div><!--end #base-->
+		<!-- END BASE -->
+
+		<!-- BEGIN JAVASCRIPT -->
+		<script src="../../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+		<script src="../../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="../../assets/js/libs/spin.js/spin.min.js"></script>
+		<script src="../../assets/js/libs/autosize/jquery.autosize.min.js"></script>
+		<script src="../../assets/js/libs/moment/moment.min.js"></script>
+		<script src="../../assets/js/libs/flot/jquery.flot.min.js"></script>
+		<script src="../../assets/js/libs/flot/jquery.flot.time.min.js"></script>
+		<script src="../../assets/js/libs/flot/jquery.flot.resize.min.js"></script>
+		<script src="../../assets/js/libs/flot/jquery.flot.orderBars.js"></script>
+		<script src="../../assets/js/libs/flot/jquery.flot.pie.js"></script>
+		<script src="../../assets/js/libs/flot/curvedLines.js"></script>
+		<script src="../../assets/js/libs/jquery-knob/jquery.knob.min.js"></script>
+		<script src="../../assets/js/libs/sparkline/jquery.sparkline.min.js"></script>
+		<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="../../assets/js/libs/raphael/raphael-min.js"></script>
+		<script src="../../assets/js/libs/morris.js/morris.min.js"></script>
+		<script src="../../assets/js/libs/d3/d3.min.js"></script>
+		<script src="../../assets/js/libs/d3/d3.v3.js"></script>
+		<script src="../../assets/js/libs/rickshaw/rickshaw.min.js"></script>
+		<script src="../../assets/js/core/source/App.js"></script>
+		<script src="../../assets/js/core/source/AppNavigation.js"></script>
+		<script src="../../assets/js/core/source/AppOffcanvas.js"></script>
+		<script src="../../assets/js/core/source/AppCard.js"></script>
+		<script src="../../assets/js/core/source/AppForm.js"></script>
+		<script src="../../assets/js/core/source/AppNavSearch.js"></script>
+		<script src="../../assets/js/core/source/AppVendor.js"></script>
+		<script src="../../assets/js/core/demo/Demo.js"></script>
+		<script src="../../assets/js/core/demo/DemoDashboard.js"></script>
+		<script src="../../assets/js/core/demo/DemoCharts.js"></script>
+
+		<!-- END JAVASCRIPT -->
+
+	</body>
+</html>
