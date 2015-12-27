@@ -31,8 +31,8 @@
 		//this._initRickshawDemo2();
 		
 		// Sparkline
-		//this._initResponsiveSparkline();
-		//this._initInlineSparkline();
+		this._initResponsiveSparkline();
+		this._initInlineSparkline();
 
 		// Knob
 		//this._initKnob();
