@@ -45,6 +45,27 @@
     padding: 0px 5px 15px 25px;
 }
 
+.pie-chart{
+    height: 120px;
+    width:150px;
+}
+
+
+.legendColorBox > div > div {
+    border-radius: 0;
+}
+
+
+
+.pie-legend-container {
+    display: table;
+
+}
+.pie-legend {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 /*.headerbar-title{*/
     /*float:left;*/
 /*}*/

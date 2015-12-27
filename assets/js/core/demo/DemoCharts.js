@@ -34,6 +34,10 @@
 		this._initResponsiveSparkline();
 		this._initInlineSparkline();
 
+
+
+		this._initAllpies();
+
 		// Knob
 		//this._initKnob();
 
@@ -45,6 +49,16 @@
 		this._initMorris();
 	};
 
+	p._initAllpies = function(){
+		var legendPlacehoder = $('#fuel-legend');
+		var fuelData = [
+			{ label: "Efficient fuel use",  data: 25, color: "#4572A7"},
+			{ label: "Inefficient fuel use",  data: 75, color: "#80699B"},
+
+		];
+
+		this._initPieChart($('#fuel-pie'),fuelData,legendPlacehoder);
+	}
 	// =========================================================================
 	// Rickshaw
 	// =========================================================================
@@ -583,6 +597,40 @@
 		}
 	};
 
+	p._initPieChart = function(elm,series,legendPlacehoder){
+
+		var data = {
+			series: series,
+			options: {
+				series: {
+					pie: {
+						show: true,
+						label: {
+							show: true,
+							radius: 0.35,
+							formatter: function(label, series) {
+								return '<div style="font-size:11px; text-align:center; padding:2px; color:white;">'+Math.round(series.percent)+'%</div>';
+							},
+							background: {
+								opacity: 0.8
+							}
+						}
+					}
+
+
+				},
+				legend: {
+					labelBoxBorderColor: "none",
+					container:legendPlacehoder
+				}
+			}
+
+	};
+
+
+		$.plot( elm, data.series, data.options );
+
+	}
 	// =========================================================================
 	namespace.DemoCharts = new DemoCharts;
 }(this.materialadmin, jQuery)); // pass in (namespace, jQuery):
