@@ -26,7 +26,7 @@
 	// =========================================================================
 
 	p.initialize = function () {
-		//this._initSparklines();
+		this._initMorris();
 		//this._initFlotVisitors();
 		//this._initRickshaw();
 		//this._initKnob();
@@ -64,7 +64,158 @@
 			$('.sparkline-visits').sparkline(points, options);
 		});
 	};
-	
+	p._initMorris = function () {
+		if (typeof Morris !== 'object') {
+			return;
+		}
+
+		// Morris Donut demo
+		if ($('#morris-donut-graph').length > 0) {
+			Morris.Donut({
+				element: 'morris-donut-graph',
+				data: [
+					{value: 70, label: 'foo', formatted: 'at least 70%'},
+					{value: 15, label: 'bar', formatted: 'approx. 15%'},
+					{value: 10, label: 'baz', formatted: 'approx. 10%'},
+					{value: 5, label: 'A really really long label', formatted: 'at most 5%'}
+				],
+				colors: $('#morris-donut-graph').data('colors').split(','),
+				formatter: function (x, data) {
+					return data.formatted;
+				}
+			});
+		}
+
+		// Morris line demo
+		if ($('#morris-line-graph').length > 0) {
+			var decimal_data = [];
+			for (var x = 0; x <= 360; x += 10) {
+				decimal_data.push({
+					x: x,
+					y: 1.5 + 1.5 * Math.sin(Math.PI * x / 180).toFixed(4)
+				});
+			}
+			window.m = Morris.Line({
+				element: 'morris-line-graph',
+				data: decimal_data,
+				xkey: 'x',
+				ykeys: ['y'],
+				labels: ['sin(x)'],
+				parseTime: false,
+				resize: true,
+				lineColors: $('#morris-line-graph').data('colors').split(','),
+				hoverCallback: function (index, options, default_content) {
+					var row = options.data[index];
+					return default_content.replace("sin(x)", "1.5 + 1.5 sin(" + row.x + ")");
+				},
+				xLabelMargin: 10,
+				integerYLabels: true
+			});
+		}
+
+		// Morris Bar demo
+		if ($('#fuel-efficiency-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'fuel-efficiency-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#fuel-efficiency-bar-graph').data('colors').split(',')
+			});
+		}
+
+		if ($('#productive-efficiency-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'productive-efficiency-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#productive-efficiency-bar-graph').data('colors').split(',')
+			});
+		}
+		//deviation-bar-graph
+		if ($('#deviation-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'deviation-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#deviation-bar-graph').data('colors').split(',')
+			});
+		}
+
+		//maintenance-cost-bar-graph
+		if ($('#maintenance-cost-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'maintenance-cost-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 6, z: 2, a: 6},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 4, z: 8, a: 4}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				barColors: $('#maintenance-cost-bar-graph').data('colors').split(',')
+			});
+		}
+		// Morris stacked bar demo
+		if ($('#morris-stacked-bar-graph').length > 0) {
+			Morris.Bar({
+				element: 'morris-stacked-bar-graph',
+				data: [
+					{x: '2011 Q1', y: 3, z: 2, a: 3},
+					{x: '2011 Q2', y: 2, z: null, a: 1},
+					{x: '2011 Q3', y: 0, z: 2, a: 4},
+					{x: '2011 Q4', y: 2, z: 4, a: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z', 'a'],
+				labels: ['Y', 'Z', 'A'],
+				stacked: true,
+				barColors: $('#morris-stacked-bar-graph').data('colors').split(',')
+			});
+		}
+
+		// Morris Area demo
+		if ($('#morris-area-graph').length > 0) {
+			var labelColor = $('#morris-area-graph').css('color');
+			Morris.Area({
+				element: 'morris-area-graph',
+				behaveLikeLine: true,
+				data: [
+					{x: '2011 Q1', y: 3, z: 3},
+					{x: '2011 Q2', y: 2, z: 1},
+					{x: '2011 Q3', y: 2, z: 4},
+					{x: '2011 Q4', y: 3, z: 3}
+				],
+				xkey: 'x',
+				ykeys: ['y', 'z'],
+				labels: ['Y', 'Z'],
+				gridTextColor: labelColor,
+				lineColors: $('#morris-area-graph').data('colors').split(',')
+			});
+		}
+	};
 	// =========================================================================
 	// FLOT
 	// =========================================================================
