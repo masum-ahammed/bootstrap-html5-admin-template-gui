@@ -30,13 +30,13 @@
 		}
 
 		// Init the demo DataTables
-		this._createDataTable1();
-		this._createDataTable2();
+		this._createDataTableOverview();
+		this._createDataTableHomeVisitation();
 	};
 
-	p._createDataTable1 = function() {
-	 var table = $('#datatable1').DataTable({
-			"dom": 'frt<"row"<"col-md-12"<"col-md-6 col-xs-6"p><"#datatable1-tools-container.col-md-6 col-xs-6">>>',
+	p._createDataTableHomeVisitation = function() {
+	 var table = $('#datatable-home-visitation').DataTable({
+			"dom": 'frt<"row"<"col-md-12"<"col-md-6 col-xs-6"p><"#datatable-home-visitation-tools-container.datatable-tools-container col-md-6 col-xs-6">>>',
 			"order": [],
 
 			"language": {
@@ -58,10 +58,36 @@
 			}]
 		});
 
-		$('#datatable1-tools-container').html(tableTools.fnContainer());
+		$('#datatable-home-visitation-tools-container').html(tableTools.fnContainer());
 
 }
+	p._createDataTableOverview = function() {
+		var table = $('#datatable-overview').DataTable({
+			"dom": 'frt<"row"<"col-md-12"<"col-md-6 col-xs-6"p><"#datatable-overview-tools-container.datatable-tools-container col-md-6 col-xs-6">>>',
+			"order": [],
 
+			"language": {
+				"lengthMenu": '_MENU_ entries per page',
+				"search": '<i class="fa fa-search"></i>',
+				"paginate": {
+					"previous": '<i class="fa fa-angle-left"></i>',
+					"next": '<i class="fa fa-angle-right"></i>'
+				}
+			}
+
+		});
+
+		var tableTools = new $.fn.dataTable.TableTools( table, {
+			"sSwfPath": "../../assets/js/libs/DataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf",
+			"aButtons": [{
+				"sExtends": "pdf",
+				"sButtonText": "<span><i class='fa fa-print'></i>Export data</span>"
+			}]
+		});
+
+		$('#datatable-overview-tools-container').html(tableTools.fnContainer());
+
+	}
 
 
 
