@@ -10,6 +10,7 @@
 
 .headerbar-left  li > h3{
     margin-top:5px;
+    height: 8px;
 }
 
 .headerbar-right > .header-nav{
@@ -68,6 +69,26 @@
 }
 .small-bar-chart-body{
     padding:15px;
+}
+
+.breadcrumb > .active {
+
+    /* font-weight: 400; */
+    font-size: 12px;
+}
+
+.headerbar-left a {
+     float: none;
+}
+.breadcrumb > li  > a{
+    font-weight: bold;
+
+
+}
+.breadcrumb > li + li:before {
+
+    content: ">";
+
 }
 /*.headerbar-title{*/
     /*float:left;*/
