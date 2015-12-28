@@ -35,14 +35,10 @@
 	};
 
 	p._createDataTable1 = function() {
-		$('#datatable1').DataTable({
-			"dom": 'lCfrtip',
+	 var table = $('#datatable1').DataTable({
+			"dom": 'frt<"row"<"col-md-12"<"col-md-6 col-xs-6"p><"#datatable1-tools-container.col-md-6 col-xs-6">>>',
 			"order": [],
-			"colVis": {
-				"buttonText": "Columns",
-				"overlayFade": 0,
-				"align": "right"
-			},
+
 			"language": {
 				"lengthMenu": '_MENU_ entries per page',
 				"search": '<i class="fa fa-search"></i>',
@@ -51,12 +47,25 @@
 					"next": '<i class="fa fa-angle-right"></i>'
 				}
 			}
+
 		});
 
-		$('#datatable1 tbody').on('click', 'tr', function() {
-			$(this).toggleClass('selected');
+		var tableTools = new $.fn.dataTable.TableTools( table, {
+			"sSwfPath": "../../assets/js/libs/DataTables/extensions/TableTools/swf/copy_csv_xls_pdf.swf",
+			"aButtons": [{
+				"sExtends": "pdf",
+				"sButtonText": "<span><i class='fa fa-print'></i>Export data</span>"
+			}]
 		});
-	};
+
+		$('#datatable1-tools-container').html(tableTools.fnContainer());
+
+}
+
+
+
+
+
 
 	p._createDataTable2 = function() {
 		var table = $('#datatable2').DataTable({

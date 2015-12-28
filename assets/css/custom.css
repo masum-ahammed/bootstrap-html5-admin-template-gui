@@ -90,6 +90,16 @@
     content: ">";
 
 }
+
+.table-responsive {
+ overflow-x: hidden;
+}
+#datatable1-tools-container{
+    margin-top:14px;
+}
+#datatable1-tools-container i{
+    padding:5px;
+}
 /*.headerbar-title{*/
     /*float:left;*/
 /*}*/
