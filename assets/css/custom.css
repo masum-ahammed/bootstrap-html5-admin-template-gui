@@ -1,7 +1,7 @@
 
 section {
 
-    padding: 15px;
+    padding: 20px;
 }
 .btn {
     font-size:12px;
@@ -126,12 +126,18 @@ section {
 }
 
 
-.bar-chart{
+.bar-chart-container{
     padding:0px 10px;
+
 }
 
-.bar-chart .card-body{
-    padding:15px;
+.bar-chart-container .card-body{
+    padding:0 10px;
+
+}
+.bar-chart-container .bar-chart{
+    height:175px
+
 }
 
 
