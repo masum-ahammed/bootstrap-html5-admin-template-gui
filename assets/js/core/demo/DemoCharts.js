@@ -32,7 +32,7 @@
 		
 		// Sparkline
 		this._initResponsiveSparkline();
-		this._initSparklines();
+		//this._initSparklines();
 
 
 

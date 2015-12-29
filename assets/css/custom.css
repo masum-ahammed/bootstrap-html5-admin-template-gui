@@ -56,8 +56,11 @@ section {
     min-height: 20px;
 
 }
+.card-body {
+    padding: 15px ;
+}
 .card-head header {
-    padding: 10px 24px;
+    padding: 0px 24px;
     line-height: 15px;
 }
 .card-detail{
@@ -111,7 +114,8 @@ section {
 }
 
 .table-responsive {
- overflow-x: hidden;
+ overflow: hidden;
+
 }
 
 #datatable-overview-tools-container,#datatable-home-visitation-tools-container{
@@ -136,8 +140,16 @@ section {
 
 }
 .bar-chart-container .bar-chart{
-    height:175px
+    height:160px
 
+}
+.tip{
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid #caf0ee;
+    text-align: left;
+    height:133px;
+    overflow-y: auto;
 }
 
 
