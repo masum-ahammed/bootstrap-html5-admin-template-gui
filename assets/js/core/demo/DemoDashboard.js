@@ -26,13 +26,22 @@
 	// =========================================================================
 
 	p.initialize = function () {
+		this._equalHeightRows();
 		this._initMorris();
+
 		//this._initFlotVisitors();
 		//this._initRickshaw();
 		//this._initKnob();
 		//this._initFlotRegistration();
 	};
 
+	p._equalHeightRows = function(){
+		var screenHeight = $('#base').outerHeight() - 135;
+		console.log('screen height : '+ screenHeight);
+		var rowHeight = screenHeight/2;
+		console.log('rowHeight : '+ rowHeight);
+		$('.section-body > .row').height(rowHeight);
+	}
 	// =========================================================================
 	// Sparklines
 	// =========================================================================

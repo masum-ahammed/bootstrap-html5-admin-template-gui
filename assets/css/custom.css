@@ -36,6 +36,13 @@ section {
 .page-footer{
    background-color: #2B323A;
     color:#fff;
+    position:fixed;
+    left: 60px;
+    bottom: 0px;
+    height: 30px;
+    width: 96%;
+    padding: 5px 10px;
+
 }
 
 .page-footer .page-footer-left {
@@ -151,6 +158,7 @@ section {
     height:133px;
     overflow-y: auto;
 }
+
 
 
 /*.headerbar-title{*/
