@@ -40,7 +40,8 @@
 		console.log('screen height : '+ screenHeight);
 		var rowHeight = screenHeight/2;
 		console.log('rowHeight : '+ rowHeight);
-		$('.section-body > .row').height(rowHeight);
+		//$('.section-body > .row').height(rowHeight);
+		$('.section-body > .row .card >.card-body .bar-chart-container .bar-chart').height(rowHeight-120);
 	}
 	// =========================================================================
 	// Sparklines

@@ -1,7 +1,9 @@
 
 section {
-
     padding: 20px;
+}
+.section-body:first-child {
+    margin-top: 20px;
 }
 .btn {
     font-size:12px;
@@ -21,16 +23,6 @@ section {
 .headerbar-right > .header-nav{
     padding:15px;
 
-}
-@media (max-width: 768px) {
-    .headerbar-right {
-        height:70px;
-        padding-top: 2px;
-    }
-    .headerbar-right > .header-nav{
-        padding:0px;
-
-    }
 }
 
 .page-footer{
@@ -54,6 +46,21 @@ section {
     display: block;
 }
 
+@media (max-width: 768px) {
+    .headerbar-right {
+        height:70px;
+        padding-top: 2px;
+    }
+    .headerbar-right > .header-nav{
+        padding:0px;
+
+    }
+    .page-footer{
+        left: 0;
+        width: 100%;
+    }
+}
+
 .card{
     margin-bottom: 15px;
 }
@@ -71,7 +78,7 @@ section {
     line-height: 15px;
 }
 .card-detail{
-    padding: 0px 5px 5px 20px;
+    padding: 15px 5px 5px 20px;
     font-size: 10px;
 }
 
@@ -146,10 +153,10 @@ section {
     padding:0 10px;
 
 }
-.bar-chart-container .bar-chart{
-    height:160px
+/*.bar-chart-container .bar-chart{*/
+    /*height:160px*/
 
-}
+/*}*/
 .tip{
     padding-right: 15px;
     padding-left: 0;
