@@ -31,7 +31,7 @@
 		//this._initRickshawDemo2();
 		
 		// Sparkline
-		this._initResponsiveSparkline();
+		//this._initResponsiveSparkline();
 		//this._initSparklines();
 
 
@@ -56,8 +56,14 @@
 			{ label: "Inefficient fuel use",  data: 75, color: "#80699B"},
 
 		];
-
-		this._initPieChart($('#fuel-pie'),fuelData,legendPlacehoder);
+		if($('#fuel-pie').length){
+			this._initPieChart($('#fuel-pie'),fuelData,legendPlacehoder);
+		}
+		if($('#productive-pie').length){
+			fuelData[0].label ='Productive';
+			fuelData[0].label ='Unproductive';
+			this._initPieChart($('#productive-pie'),fuelData,legendPlacehoder);
+		}
 	}
 	// =========================================================================
 	// Rickshaw
