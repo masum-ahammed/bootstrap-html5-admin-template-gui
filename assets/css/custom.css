@@ -164,7 +164,7 @@ section {
     padding-left: 0;
     border-right: 5px solid #caf0ee;
     text-align: left;
-    height:133px;
+    min-height:133px;
     overflow-y: auto;
 }
 
