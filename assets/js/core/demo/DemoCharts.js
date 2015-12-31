@@ -58,11 +58,16 @@
 		];
 		if($('#fuel-pie').length){
 			this._initPieChart($('#fuel-pie'),fuelData,legendPlacehoder);
-		}
+		}//cost-pie
 		if($('#productive-pie').length){
 			fuelData[0].label ='Productive';
 			fuelData[0].label ='Unproductive';
 			this._initPieChart($('#productive-pie'),fuelData,legendPlacehoder);
+		}
+		if($('#cost-pie').length){
+			fuelData[0].label ='Cost inefficient';
+			fuelData[0].label ='Cost efficient';
+			this._initPieChart($('#cost-pie'),fuelData,legendPlacehoder);
 		}
 	}
 	// =========================================================================

@@ -82,9 +82,10 @@ section {
     padding: 15px 5px 5px 20px;
     font-size: 10px;
 }
-.productiveness-card > .card-body{
+.productiveness-card > .card-body,.maintenance-card >.card-body{
     padding: 9px 15px;
 }
+
 .pie-chart{
     height: 120px;
     width:150px;
@@ -172,6 +173,8 @@ section {
 .legendLabel{
     text-align:left;
 }
+
+
 
 
 /*.headerbar-title{*/
