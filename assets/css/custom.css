@@ -119,9 +119,10 @@ section {
 }
 .breadcrumb > li  > a{
     font-weight: bold;
-
+    text-decoration: underline;
 
 }
+
 .breadcrumb > li + li:before {
 
     content: ">";
