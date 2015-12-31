@@ -82,7 +82,7 @@ section {
     padding: 15px 5px 5px 20px;
     font-size: 10px;
 }
-.productiveness-card > .card-body,.maintenance-card >.card-body{
+.tip-card > .card-body{
     padding: 9px 15px;
 }
 
