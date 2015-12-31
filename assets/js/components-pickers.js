@@ -1,9 +1,11 @@
 var ComponentsPickers = function () {
 
+    var self = this;
+    $(document).ready(function () {
+        self.handleDateRangePickers();
+    });
 
-
-
-    var handleDateRangePickers = function () {
+    self.handleDateRangePickers = function () {
         if (!jQuery().daterangepicker) {
             return;
         }
@@ -58,13 +60,6 @@ var ComponentsPickers = function () {
 
 
 
-    return {
-        //main function to initiate the module
-        init: function () {
-
-            handleDateRangePickers();
-
-        }
-    };
 
 }();
+
